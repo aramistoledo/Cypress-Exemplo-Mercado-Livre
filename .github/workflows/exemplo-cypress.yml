@@ -1,0 +1,11 @@
+name: Automação-Cypress-Mercado-Livre
+on: [push]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - run: npm install
+      - name: Cypress run
+        uses: cypress-io/github-action@v4
